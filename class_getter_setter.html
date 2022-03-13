@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class : Getter dan Setter</title>
+</head>
+
+<body>
+    <script>
+        class Person {
+            constructor(firstName, lastName) {
+                this.firstName = firstName;
+                this.lastName = lastName;
+            }
+
+            get fullName() {
+                return `${this.firstName} ${this.lastName}`;
+            }
+
+            set fullName(value) {
+                const hasil = value.split(" ");
+                this.firstName = hasil[0];
+                this.lastName = hasil[1];
+            }
+        }
+
+        const name = new Person("Muhammad Azzam Nur", "Alwi Mansyur");
+        console.info(name);
+        console.info(name.fullName);
+
+        name.fullName = "Lovina Aulia";
+        console.info(name);
+    </script>
+</body>
+
+</html>

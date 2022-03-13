@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+</head>
+
+<body>
+    <script>
+        function Person(firstName, lastName) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.sayHello = function (name) {
+                console.info(`Hello ${name}, my name is ${this.firstName} ${this.lastName}`)
+            }
+        }
+
+        // menambahkan property ke dalam prototype nya
+        Person.prototype.sayBye = function () {
+            console.info("Good Bye");
+        }
+
+        Person.prototype.run = function () {
+            console.info(`${this.firstName} ${this.lastName} is running`);
+        }
+
+        const azzam = new Person("Muhammad Azzam Nur", "Alwi Mansyur");
+        // menambahkan property ke instance object nya
+        // azzam.sayBye = function () {
+        //     console.info("Good Bye");
+        // }
+        azzam.sayBye = function () {
+            console.info("Sampai Jumpa");
+        }
+
+        const lovina = new Person("Lovina", "Aulia");
+
+        console.log(azzam);
+        console.log(lovina);
+
+        azzam.sayBye();
+        azzam.run();
+
+        lovina.run();
+        lovina.sayBye();
+    </script>
+</body>
+
+</html>
