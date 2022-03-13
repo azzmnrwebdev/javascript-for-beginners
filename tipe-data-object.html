@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipe Data Object</title>
+</head>
+
+<body>
+    <script>
+        const orang = {
+            "nama lengkap": "Muhammad Azzam Nur",
+            alamat: "Indonesia",
+            umur: 21
+        };
+
+        console.info(`Nama: ${orang["nama lengkap"]} 
+                    \nAlamat: ${orang.alamat}
+                    \nUmur: ${orang.umur}`);
+
+        console.table(orang);
+
+        const person = {};
+
+        // Menambhakan data array
+        person["nama"] = "Muhammad Azzam Nur Alwi Mansyur";
+        person["alamat"] = "Indonesia";
+        person["umur"] = 20;
+
+        console.table(person);
+
+        delete person["umur"]; // menghapus array
+        console.table(person);
+    </script>
+</body>
+
+</html>
